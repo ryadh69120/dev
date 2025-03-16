@@ -10,122 +10,116 @@
     <meta name="author" content="Ryadh Abd" />
     <title>Développeur.Net - Boutique de Sites Web</title>
     <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
             transition: all 0.5s ease;
         }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #4b6cb7, #182848);
+            background: linear-gradient(135deg, #3498db, #2c3e50);
             color: white;
             text-align: center;
             padding: 80px 20px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-out;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: bold;
         }
 
         .header .subtitle {
             font-size: 1.5rem;
             margin-top: 10px;
+            font-weight: 300;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Section of Products */
+        /* Products Section */
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
+            padding: 40px;
+            margin: 0 auto;
+            max-width: 1200px;
         }
 
         .product {
-            background: white;
-            padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            text-align: center;
         }
 
         .product:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .product img {
             width: 100%;
+            max-width: 400px;
             border-radius: 5px;
             transition: transform 0.3s ease;
         }
 
         .product:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .product h3 {
-            color: #182848;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: #34495e;
             margin-top: 15px;
         }
 
         .product p {
             font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: #666;
+            color: #7f8c8d;
         }
 
         .product .price {
+            font-size: 1.4rem;
+            color: #e74c3c;
+            margin: 15px 0;
             font-weight: bold;
-            color: #ff5733;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
         }
 
         .cta-btn {
-            background: #ff5733;
+            background-color: #e74c3c;
             color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-size: 1.1rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             font-weight: bold;
             border-radius: 30px;
-            transition: all 0.3s ease;
+            text-decoration: none;
             display: inline-block;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.5);
         }
 
         .cta-btn:hover {
-            background: #c70039;
-            transform: scale(1.1);
+            background-color: #c0392b;
+            transform: scale(1.05);
         }
 
-        /* Form for Contact / Order */
+        /* Order Form Section */
         #order-form {
             background: #fff;
             padding: 40px;
-            margin: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-            animation: slideInUp 1s ease-out;
+            margin: 30px auto;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         #order-form input,
@@ -133,58 +127,62 @@
         #order-form button {
             width: 100%;
             padding: 12px;
-            margin-top: 10px;
-            border-radius: 5px;
+            margin: 10px 0;
             font-size: 16px;
             border: 1px solid #ddd;
-            transition: border 0.3s ease;
+            border-radius: 5px;
         }
 
         #order-form input:focus,
         #order-form textarea:focus {
-            border: 1px solid #ff5733;
+            border-color: #e74c3c;
         }
 
         #order-form button {
-            background: #ff5733;
+            background-color: #e74c3c;
             color: white;
             cursor: pointer;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
 
         #order-form button:hover {
-            background: #c70039;
+            background-color: #c0392b;
         }
 
         /* Footer */
         footer {
-            background: #182848;
+            background-color: #34495e;
             color: white;
             padding: 20px;
             text-align: center;
-            margin-top: 30px;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         footer a {
-            color: #ff5733;
+            color: #e74c3c;
             text-decoration: none;
         }
 
-        /* Animations */
-        @keyframes slideInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
             }
 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            .header .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                padding: 20px;
+            }
+
+            #order-form {
+                padding: 30px;
             }
         }
-
     </style>
 </head>
 
@@ -192,14 +190,14 @@
 
     <header class="header">
         <h1>Développeur.Net - Boutique de Sites Web</h1>
-        <p class="subtitle">Choisissez votre site parmi nos offres et commencez à booster votre présence en ligne.</p>
+        <p class="subtitle">Créez votre site professionnel personnalisé dès aujourd'hui. Choisissez l'une de nos offres.</p>
     </header>
 
     <section class="products">
         <div class="product">
             <img src="https://via.placeholder.com/400x300" alt="Site Vitrine">
             <h3>Site Vitrine</h3>
-            <p>Présentez votre activité en ligne avec un site simple et moderne.</p>
+            <p>Un site simple pour présenter votre activité.</p>
             <div class="price">À partir de 20€</div>
             <a href="#order-form" class="cta-btn">Commander maintenant</a>
         </div>
@@ -207,7 +205,7 @@
         <div class="product">
             <img src="https://via.placeholder.com/400x300" alt="Landing Page">
             <h3>Landing Page</h3>
-            <p>Une page unique pour capter l'attention de vos visiteurs.</p>
+            <p>Attirez vos clients avec une page unique optimisée.</p>
             <div class="price">À partir de 15€</div>
             <a href="#order-form" class="cta-btn">Commander maintenant</a>
         </div>
@@ -215,19 +213,18 @@
         <div class="product">
             <img src="https://via.placeholder.com/400x300" alt="Amélioration de Site">
             <h3>Amélioration de Site</h3>
-            <p>Optimisez et refaites votre site existant pour le rendre plus performant.</p>
+            <p>Optimisez et refaites votre site actuel.</p>
             <div class="price">Prix sur demande</div>
             <a href="#order-form" class="cta-btn">Commander maintenant</a>
         </div>
     </section>
 
     <section id="order-form">
-        <h2>Commander un site</h2>
-        <p>Choisissez l'une de nos offres et remplissez ce formulaire pour recevoir plus d'informations.</p>
+        <h2>Passer une commande</h2>
         <form action="https://formspree.io/f/movevdzw" method="POST">
             <input type="text" name="name" placeholder="Votre nom" required>
             <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Quel type de site voulez-vous ?" rows="4" required></textarea>
+            <textarea name="message" placeholder="Quel type de site souhaitez-vous ?" rows="4" required></textarea>
             <button type="submit">Envoyer ma commande</button>
         </form>
     </section>
