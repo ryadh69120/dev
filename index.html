@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="AZYq09jzaq-wuImilSJjhhIoywnaZpd6Ox7wcexQw5I" />
+    <meta name="robots" content="index, follow"> <!-- Permet à Google de suivre et indexer la page -->
+    <meta name="author" content="Ryadh Abd">
+    <meta name="description" content="Développeur passionné, spécialisé en HTML et CSS, je vous aide à créer des sites web professionnels modernes et performants.">
+    <meta name="keywords" content="création de site web, développeur freelance, site vitrine, landing page, développement HTML CSS, développement web">
+    <meta name="theme-color" content="#1a1a2e"> <!-- Couleur de la barre de titre sur mobile -->
+    <meta property="og:title" content="Développeur.Net - Création de sites professionnels">
+    <meta property="og:description" content="Boostez votre présence en ligne avec un site web professionnel créé par un développeur spécialisé en HTML et CSS.">
+    <meta property="og:image" content="URL_DE_TON_IMAGE_DE_PREVIEW" /> <!-- Image à afficher lors du partage sur réseaux sociaux -->
+    <meta property="og:url" content="https://ton-site.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Développeur.Net - Création de sites professionnels">
+    <meta name="twitter:description" content="Boostez votre présence en ligne avec un site web professionnel créé par un développeur spécialisé en HTML et CSS.">
+    <meta name="twitter:image" content="URL_DE_TON_IMAGE_DE_PREVIEW" />
     <title>Développeur.Net - Création de sites professionnels</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Ajout d'un favicon -->
+    <link rel="canonical" href="https://ton-site.com"> <!-- URL canonique pour éviter le contenu dupliqué -->
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -15,17 +29,20 @@
             padding: 0;
             background: #1a1a2e;
             color: white;
-            text-align: center; 
+            text-align: center;
         }
+
         .header {
             background: linear-gradient(135deg, #365e4b, #323436);
             padding: 80px 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
         }
+
         .cta-btn {
             background: #ff5733;
             color: white;
@@ -39,9 +56,11 @@
             transition: 0.3s;
             box-shadow: 0 4px 10px rgba(255,87,51,0.5);
         }
+
         .cta-btn:hover {
             background: #c70039;
         }
+
         section {
             padding: 50px 20px;
             background: #16213e;
@@ -49,6 +68,7 @@
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         }
+
         form input, form textarea, form button {
             width: 100%;
             padding: 12px;
@@ -57,11 +77,13 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
         form input, form textarea {
             background: #1b1b3a;
             color: white;
             border: 1px solid #ff5733;
         }
+
         form button {
             background: #ff5733;
             color: white;
@@ -69,15 +91,18 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
         form button:hover {
             background: #c70039;
         }
+
         .success-message {
             display: none;
             color: #00ff00;
             font-weight: bold;
             margin-top: 20px;
         }
+
         footer {
             background: #0f3460;
             color: white;
@@ -85,6 +110,48 @@
             margin-top: 30px;
         }
     </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Création de sites web modernes et efficaces</h1>
+            <p class="subtitle">Boostez votre présence en ligne avec un site professionnel</p>
+            <a href="#contact" class="cta-btn">Obtenez votre site maintenant</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Qui suis-je ?</h2>
+        <p>Développeur passionné, spécialisé en HTML et CSS, j’aide les entrepreneurs, freelances et petites entreprises à créer des sites modernes et performants. Mon but est de vous aider à établir une forte présence en ligne.</p>
+    </section>
+
+    <section>
+        <h2>Mes services</h2>
+        <ul>
+            <li><strong>Site vitrine</strong> - Présentez votre activité en ligne avec un site professionnel (à partir de 20€)</li>
+            <li><strong>Landing page</strong> - Une page optimisée pour capter l’attention de vos clients potentiels (à partir de 15€)</li>
+            <li><strong>Amélioration de site existant</strong> - Refonte et optimisation de votre site pour le rendre plus performant</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <p>Vous avez besoin d’un site web ? Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.</p>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre demande" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="success-message" class="success-message">Votre message a bien été envoyé. Merci pour votre confiance.</p>
+    </section>
+
+    <footer>
+        <p>Contact direct : <a href="mailto:ryadhabd69@gmail.com">ryadhabd69@gmail.com</a></p>
+        <p>© 2025 Développeur.Net. Tous droits réservés.</p>
+    </footer>
+
     <script>
         function handleSubmit(event) {
             event.preventDefault();
@@ -108,44 +175,6 @@
             });
         }
     </script>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1>Création de sites web modernes et efficaces</h1>
-            <p class="subtitle">Boostez votre présence en ligne avec un site professionnel</p>
-            <a href="#contact" class="cta-btn">Obtenez votre site maintenant</a>
-        </div>
-    </header>
-
-    <section>
-        <h2>Qui suis-je ?</h2>
-        <p>Développeur passionné, spécialisé en HTML et CSS, j’aide les entrepreneurs, freelances et petites entreprises à créer des sites modernes et performants.</p>
-    </section>
-
-    <section>
-        <h2>Mes services</h2>
-        <ul>
-            <li><strong>Site vitrine</strong> - Présentez votre activité en ligne (à partir de 20€)</li>
-            <li><strong>Landing page</strong> - Une page unique optimisée pour attirer des clients (à partir de 15€)</li>
-            <li><strong>Amélioration de site existant</strong> - Refonte et optimisation de votre site web</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <p>Besoin d’un site web ? Remplissez le formulaire ci-dessous et je vous répondrai rapidement.</p>
-        <form id="contact-form" onsubmit="handleSubmit(event)">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre demande" rows="4" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-        <p id="success-message" class="success-message">Votre message a bien été envoyé. On vous répondra aussi vite que possible. Merci d’avoir choisi Développeur.Net.</p>
-    </section>
-
-    <footer>
-        <p>Contact direct : <a href="mailto:ryadhabd69@gmail.com">ryadhabd69@gmail.com</a></p>
-    </footer>
 </body>
 </html>
+
