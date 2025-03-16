@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="AZYq09jzaq-wuImilSJjhhIoywnaZpd6Ox7wcexQw5I" />
+    <meta name="description" content="Développeur.Net - Créez votre site web professionnel personnalisé. Découvrez nos offres de sites vitrines, landing pages, et plus encore." />
+    <meta name="keywords" content="site web, création de site, landing page, freelance, développement, site vitrine, site professionnel, développement web">
+    <meta name="author" content="Ryadh Abd" />
     <title>Développeur.Net - Boutique de Sites Web</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -13,6 +18,7 @@
             padding: 0;
             background-color: #f7f7f7;
             color: #333;
+            transition: all 0.5s ease;
         }
 
         /* Header */
@@ -22,16 +28,27 @@
             text-align: center;
             padding: 80px 20px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
         }
 
         .header h1 {
             font-size: 3rem;
-            animation: fadeIn 2s ease-out;
         }
 
         .header .subtitle {
             font-size: 1.5rem;
             margin-top: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Section of Products */
@@ -47,16 +64,22 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product:hover {
             transform: scale(1.05);
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .product img {
             width: 100%;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
         }
 
         .product h3 {
@@ -68,6 +91,7 @@
         .product p {
             font-size: 1.1rem;
             margin-bottom: 10px;
+            color: #666;
         }
 
         .product .price {
@@ -80,7 +104,7 @@
         .cta-btn {
             background: #ff5733;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: bold;
@@ -101,9 +125,12 @@
             margin: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s ease-out;
         }
 
-        #order-form input, #order-form textarea, #order-form button {
+        #order-form input,
+        #order-form textarea,
+        #order-form button {
             width: 100%;
             padding: 12px;
             margin-top: 10px;
@@ -113,7 +140,8 @@
             transition: border 0.3s ease;
         }
 
-        #order-form input:focus, #order-form textarea:focus {
+        #order-form input:focus,
+        #order-form textarea:focus {
             border: 1px solid #ff5733;
         }
 
@@ -145,16 +173,21 @@
         }
 
         /* Animations */
-        @keyframes fadeIn {
+        @keyframes slideInUp {
             0% {
                 opacity: 0;
+                transform: translateY(50px);
             }
+
             100% {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
+
     </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -204,4 +237,5 @@
     </footer>
 
 </body>
+
 </html>
